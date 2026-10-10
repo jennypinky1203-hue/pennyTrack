@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PennyTrack | Make Every Penny Count</title>
+
+    <meta name="description"
+        content="Track your expenses, manage your budget, and take control of your finances with PennyTrack.">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">₦</span>
+                <span>penny<span class="green-text">Track</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+                <a href="#get-started" class="mobile-cta">
+                    Get Started
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="auth.html?form=login" class="login-link">Log In</a>
+
+                <a href="auth.html?form=signup"  class="btn btn-primary">
+                    Get Started
+                    <span>↗</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="navLinks">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero" id="home">
+
+            <div class="hero-glow"></div>
+
+            <div class="container hero-container">
+
+                <!-- HERO CONTENT -->
+                <div class="hero-content">
+
+                    <div class="hero-label">
+                        <span class="status-dot"></span>
+                        YOUR MONEY, YOUR CONTROL
+                    </div>
+
+                    <h1>
+                        Make every
+                        <span class="green-text">penny</span>
+                        count.
+                    </h1>
+
+                    <p class="hero-description">
+                        Take control of your finances with confidence.
+                        Track your expenses, manage your budget, and
+                        build better money habits — all in one simple place.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#get-started" class="btn btn-primary">
+                            Start Tracking Free
+                            <span>→</span>
+                        </a>
+
+                        <a href="#features" class="btn btn-secondary">
+                            Explore Features
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="check-icon">✓</span>
+                        Simple budgeting. Clear insights. Better decisions.
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD PREVIEW -->
+                <div class="dashboard-wrapper">
+
+                    <div class="floating-card">
+                        <div class="floating-icon">↗</div>
+
+                        <div>
+                            <p>Financial progress</p>
+                            <h4>Build better habits</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="dashboard">
+
+                        <div class="dashboard-header">
+                            <div>
+                                <h3>Financial Overview</h3>
+                                <p>Your money at a glance</p>
+                            </div>
+
+                            <span class="month-label">This Month⌄</span>
+                        </div>
+
+
+                        <!-- BALANCE CARD -->
+                        <div class="balance-card">
+                            <div class="balance-top">
+                                <p>Total Balance</p>
+                                <span class="wallet-icon">₦</span>
+                            </div>
+
+                            <h2>₦245,800.00</h2>
+
+                            <p class="balance-caption">
+                                Your finances, in focus
+                            </p>
+                        </div>
+
+
+                        <!-- INCOME AND EXPENSES -->
+                        <div class="summary-cards">
+
+                            <div class="summary-card">
+                                <div class="summary-heading">
+                                    <span class="summary-icon income-icon">↗</span>
+                                    <span>Income</span>
+                                </div>
+
+                                <h3 class="income">₦320,000</h3>
+                                <p>Money received</p>
+                            </div>
+
+
+                            <div class="summary-card">
+                                <div class="summary-heading">
+                                    <span class="summary-icon expense-icon">↘</span>
+                                    <span>Expenses</span>
+                                </div>
+
+                                <h3 class="expense">₦74,200</h3>
+                                <p>Money spent</p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- SPENDING CHART -->
+                        <div class="chart-card">
+
+                            <div class="chart-header">
+                                <h4>Spending Overview</h4>
+
+                                <span class="chart-legend">
+                                    <span class="legend-dot"></span>
+                                    Expenses
+                                </span>
+                            </div>
+
+                            <div class="chart">
+                                <div class="chart-bar" style="--bar-height: 38%"></div>
+                                <div class="chart-bar" style="--bar-height: 60%"></div>
+                                <div class="chart-bar" style="--bar-height: 45%"></div>
+                                <div class="chart-bar" style="--bar-height: 78%"></div>
+                                <div class="chart-bar" style="--bar-height: 55%"></div>
+                                <div class="chart-bar" style="--bar-height: 90%"></div>
+                                <div class="chart-bar" style="--bar-height: 65%"></div>
+                                <div class="chart-bar" style="--bar-height: 48%"></div>
+                                <div class="chart-bar" style="--bar-height: 72%"></div>
+                                <div class="chart-bar" style="--bar-height: 58%"></div>
+                                <div class="chart-bar" style="--bar-height: 82%"></div>
+                                <div class="chart-bar" style="--bar-height: 50%"></div>
+                            </div>
+
+                            <div class="chart-labels">
+                                <span>Week 1</span>
+                                <span>Week 2</span>
+                                <span>Week 3</span>
+                                <span>Week 4</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- FEATURES SECTION -->
+        <section class="features-section" id="features">
+            <div class="container">
+
+                <!-- Section heading -->
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        <span class="status-dot"></span>
+                        EVERYTHING IN ONE PLACE
+                    </span>
+
+                    <h2>
+                        Everything you need to
+                        <span class="green-text">manage your money.</span>
+                    </h2>
+
+                    <p>
+                        Take the stress out of budgeting with simple tools
+                        designed to help you understand your finances and
+                        make smarter everyday decisions.
+                    </p>
+
+                </div>
+
+
+                <!-- Feature cards -->
+                <div class="features-grid">
+
+                    <!-- Feature 1 -->
+                    <article class="feature-card">
+
+                        <div class="feature-icon expense-feature">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="15" rx="3" />
+                                <path d="M3 10h18" />
+                                <path d="M7 15h4" />
+                                <path d="M16 5V3" />
+                            </svg>
+                        </div>
+
+                        <h3>Expense Tracking</h3>
+
+                        <p>
+                            Keep track of where your money goes. Record
+                            transactions and organize your spending into
+                            categories with ease.
+                        </p>
+
+                        <a href="#get-started" class="feature-link">
+                            Track expenses <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Feature 2 -->
+                    <article class="feature-card">
+
+                        <div class="feature-icon budget-feature">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v10" />
+                                <path d="M15 9.5c0-1.1-1.3-2-3-2s-3 .9-3 2 1.3 2 3 2 3 .9 3 2-1.3 2-3 2-3-.9-3-2" />
+                            </svg>
+                        </div>
+
+                        <h3>Smart Budget Planning</h3>
+
+                        <p>
+                            Create budgets for food, transportation, bills,
+                            and more. Stay aware of your limits before
+                            overspending.
+                        </p>
+
+                        <a href="#get-started" class="feature-link">
+                            Plan your budget <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Feature 3 -->
+                    <article class="feature-card">
+
+                        <div class="feature-icon income-feature">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 17l6-6 4 4 8-9" />
+                                <path d="M15 6h6v6" />
+                            </svg>
+                        </div>
+
+                        <h3>Income Monitoring</h3>
+
+                        <p>
+                            See how much money you receive from different
+                            sources and understand how your income compares
+                            with your expenses.
+                        </p>
+
+                        <a href="#get-started" class="feature-link">
+                            Monitor income <span>→</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Feature 4 -->
+                    <article class="feature-card">
+
+                        <div class="feature-icon analytics-feature">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 19V5" />
+                                <path d="M4 19h17" />
+                                <rect x="7" y="12" width="3" height="5" rx="1" />
+                                <rect x="12" y="8" width="3" height="9" rx="1" />
+                                <rect x="17" y="4" width="3" height="13" rx="1" />
+                            </svg>
+                        </div>
+
+                        <h3>Spending Analytics</h3>
+
+                        <p>
+                            Turn your transactions into useful insights.
+                            Identify spending patterns and discover where
+                            you could save more.
+                        </p>
+
+                        <a href="#get-started" class="feature-link">
+                            Explore insights <span>→</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">HOW IT WORKS</span>
+                    <h2>Better money habits in <span class="green-text">3 simple steps.</span></h2>
+                    <p>
+                        Take control of your finances with a simple process
+                        designed to make money management easier.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+
+                    <!-- STEP 1 -->
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="14" rx="3" />
+                                <path d="M3 10h18" />
+                                <path d="M7 15h3" />
+                            </svg>
+                        </div>
+
+                        <h3>Create Your Account</h3>
+                        <p>
+                            Get started in minutes. Set up your account
+                            and bring your financial activities into one place.
+                        </p>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                        </div>
+
+                        <h3>Track Your Money</h3>
+                        <p>
+                            Record your income and expenses, organize
+                            your spending, and set budgets that work for you.
+                        </p>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18" />
+                                <path d="m7 14 4-4 4 3 6-7" />
+                            </svg>
+                        </div>
+
+                        <h3>Grow Your Savings</h3>
+                        <p>
+                            Review your spending patterns, understand
+                            your habits, and make more confident financial decisions.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE PENNYTRACK -->
+        <section class="why-pennytrack" id="about">
+            <div class="container">
+
+                <div class="why-content">
+
+                    <!-- LEFT SIDE -->
+                    <div class="why-text">
+                        <span class="section-label">WHY PENNYTRACK?</span>
+
+                        <h2>
+                            Your money deserves
+                            <span class="green-text">a better plan.</span>
+                        </h2>
+
+                        <p class="why-description">
+                            Managing money shouldn't feel complicated.
+                            PennyTrack helps you understand your finances,
+                            make informed decisions, and build better money
+                            habits one step at a time.
+                        </p>
+
+                        <div class="benefit-list">
+
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <div>
+                                    <h3>See the bigger picture</h3>
+                                    <p>Understand where your money comes from and where it goes.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <div>
+                                    <h3>Make confident decisions</h3>
+                                    <p>Use your financial activity to guide your next move.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <div>
+                                    <h3>Build habits that last</h3>
+                                    <p>Stay mindful of your spending and work toward your goals.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#get-started" class="btn btn-primary">
+                            Take Control of Your Money
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                    <!-- RIGHT SIDE: FINANCIAL SUMMARY CARD -->
+                    <div class="why-visual">
+
+                        <div class="finance-card">
+
+                            <div class="finance-card-header">
+                                <div>
+                                    <span class="finance-label">Financial overview</span>
+                                    <h3>Your money, at a glance</h3>
+                                </div>
+
+                                <div class="finance-icon">↗</div>
+                            </div>
+
+                            <div class="finance-balance">
+                                <span>Total balance</span>
+                                <h2>₦245,800.00</h2>
+                                <p>Example dashboard preview</p>
+                            </div>
+
+                            <div class="finance-stats">
+
+                                <div class="finance-stat">
+                                    <div class="stat-heading">
+                                        <span class="stat-dot income-dot"></span>
+                                        Income
+                                    </div>
+                                    <h3>₦320,000</h3>
+                                </div>
+
+                                <div class="finance-stat">
+                                    <div class="stat-heading">
+                                        <span class="stat-dot expense-dot"></span>
+                                        Expenses
+                                    </div>
+                                    <h3>₦74,200</h3>
+                                </div>
+
+                            </div>
+
+                            <div class="finance-progress">
+                                <div class="progress-heading">
+                                    <span>Spending overview</span>
+                                    <span>Monthly example</span>
+                                </div>
+
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+
+                                <div class="progress-footer">
+                                    <span>Expenses</span>
+                                    <span>Income</span>
+                                </div>
+                            </div>
+
+                            <div class="finance-note">
+                                <span class="note-icon">✦</span>
+                                <p>
+                                    Small steps today can build stronger
+                                    money habits for tomorrow.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="floating-badge">
+                            <span class="badge-check">✓</span>
+                            <div>
+                                <strong>Stay in control</strong>
+                                <span>Your finances, organized</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">TESTIMONIALS</span>
+
+                    <h2>
+                        Money management that
+                        <span class="green-text">feels different.</span>
+                    </h2>
+
+                    <p>
+                        Discover how better financial habits can make
+                        everyday money decisions feel simpler.
+                    </p>
+                </div>
+
+                <div class="testimonial-grid">
+
+                    <!-- TESTIMONIAL 1 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-top">
+                            <div class="quote-mark">“</div>
+
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                ★★★★★
+                            </div>
+                        </div>
+
+                        <p class="testimonial-text">
+                            “I used to wonder where my money went every month.
+                            Having my income and expenses organized in one place
+                            makes it easier to understand my spending.”
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar avatar-one">A</div>
+
+                            <div class="user-details">
+                                <h3>Amara Okafor</h3>
+                                <span>Young Professional</span>
+                            </div>
+
+                            <div class="verified-mark" aria-hidden="true">✓</div>
+                        </div>
+                    </article>
+
+                    <!-- TESTIMONIAL 2 -->
+                    <article class="testimonial-card featured-testimonial">
+                        <div class="testimonial-top">
+                            <div class="quote-mark">“</div>
+
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                ★★★★★
+                            </div>
+                        </div>
+
+                        <p class="testimonial-text">
+                            “Planning my budget feels less overwhelming now.
+                            I can set spending limits, review my expenses,
+                            and make more thoughtful decisions about my money.”
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar avatar-two">D</div>
+
+                            <div class="user-details">
+                                <h3>David Williams</h3>
+                                <span>Small Business Owner</span>
+                            </div>
+
+                            <div class="verified-mark" aria-hidden="true">✓</div>
+                        </div>
+                    </article>
+
+                    <!-- TESTIMONIAL 3 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-top">
+                            <div class="quote-mark">“</div>
+
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                ★★★★★
+                            </div>
+                        </div>
+
+                        <p class="testimonial-text">
+                            “What I like most is having a clearer picture
+                            of my financial habits. It helps me stay mindful
+                            of my goals and plan my next steps.”
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar avatar-three">S</div>
+
+                            <div class="user-details">
+                                <h3>Sophia Adeyemi</h3>
+                                <span>University Graduate</span>
+                            </div>
+
+                            <div class="verified-mark" aria-hidden="true">✓</div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="testimonial-disclaimer">
+                    Sample testimonials for design purposes.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- FINAL CALL TO ACTION -->
+        <section class="final-cta" id="get-started">
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <div class="cta-glow"></div>
+
+                    <span class="section-label">YOUR FINANCIAL JOURNEY STARTS HERE</span>
+
+                    <h2>
+                        Ready to make every
+                        <span class="green-text">penny count?</span>
+                    </h2>
+
+                    <p>
+                        Take the guesswork out of managing money.
+                        Start building better financial habits, one step at a time.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="#login" class="btn btn-primary" id="ctaGetStarted">
+                            Get Started for Free
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#features" class="btn btn-secondary">
+                            Explore Features
+                        </a>
+                    </div>
+
+                    <div class="cta-note">
+                        <span aria-hidden="true">✓</span>
+                        Simple money management, all in one place
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer" id="contact">
+        <div class="container">
+    
+            <div class="footer-main">
+    
+                <!-- BRAND -->
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-icon">₦</span>
+                        <span>penny<span class="green-text">Track</span></span>
+                    </a>
+    
+                    <p class="footer-description">
+                        Take control of your finances, build better money
+                        habits, and make every penny count.
+                    </p>
+    
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+    
+                <!-- QUICK LINKS -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#about">Why PennyTrack</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+    
+                <!-- RESOURCES -->
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#features">Expense Tracking</a></li>
+                        <li><a href="#features">Budget Planning</a></li>
+                        <li><a href="#features">Income Monitoring</a></li>
+                        <li><a href="#features">Spending Analytics</a></li>
+                    </ul>
+                </div>
+    
+                <!-- GET STARTED -->
+                <div class="footer-column footer-cta">
+                    <h3>Get Started</h3>
+    
+                    <p>
+                        Ready to take the next step toward better
+                        money management?
+                    </p>
+    
+                    <a href="auth.html?form=signup" class="footer-button" id="footerGetStarted">
+                        Get Started
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+    
+            </div>
+    
+            <!-- FOOTER BOTTOM -->
+            <div class="footer-bottom">
+                <p>
+                    © <span id="footerYear"></span> PennyTrack.
+                    All rights reserved.
+                </p>
+    
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+    
+                <a href="#home" class="back-to-top">
+                    Back to top ↑
+                </a>
+            </div>
+    
+        </div>
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

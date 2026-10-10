@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | PennyTrack</title>
+
+    <link rel="stylesheet" href="./css/dashboard.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+                <span>Penny<span class="green-text">Track</span></span>
+            </a>
+
+            <p class="menu-label">MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="#overview" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Overview</span>
+                </a>
+
+                <a href="#transactions" class="nav-link">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="#budgets" class="nav-link">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Budgets</span>
+                </a>
+
+                <a href="#reports" class="nav-link">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports</span>
+                </a>
+
+            </nav>
+
+            <p class="menu-label">PREFERENCES</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="#settings" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Back to Home</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="help-icon">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+
+                <div>
+                    <h4>Need help?</h4>
+                    <p>We're here for you.</p>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content" id="overview">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div class="welcome">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Here's what's happening with your money.</p>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button class="icon-button" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+
+                    <div class="profile">
+                        <div class="avatar">JD</div>
+
+                        <div class="profile-info">
+                            <h4>John Doe</h4>
+                            <p>Personal Account</p>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- DATE AND ACTION -->
+            <section class="dashboard-heading">
+
+                <div>
+                    <h2>Financial Overview</h2>
+                    <p>Track your income, expenses and savings.</p>
+                </div>
+
+                <button class="primary-button" id="addTransactionBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Transaction
+                </button>
+
+            </section>
+
+
+            <!-- SUMMARY CARDS -->
+            <section class="summary-grid">
+
+                <article class="summary-card balance-card">
+
+                    <div class="card-top">
+                        <span>Total Balance</span>
+                        <span class="card-icon">
+                            <i class="fa-solid fa-wallet"></i>
+                        </span>
+                    </div>
+
+                    <h2 id="totalBalance">₦850,000.00</h2>
+
+                    <p class="card-note">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        Your current balance
+                    </p>
+
+                </article>
+
+
+                <article class="summary-card">
+
+                    <div class="card-top">
+                        <span>Total Income</span>
+                        <span class="card-icon income-icon">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </span>
+                    </div>
+
+                    <h2 id="totalIncome">₦1,200,000.00</h2>
+
+                    <p class="card-note positive">
+                        <i class="fa-solid fa-circle-arrow-up"></i>
+                        Money received
+                    </p>
+
+                </article>
+
+
+                <article class="summary-card">
+
+                    <div class="card-top">
+                        <span>Total Expenses</span>
+                        <span class="card-icon expense-icon">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </span>
+                    </div>
+
+                    <h2 id="totalExpenses">₦350,000.00</h2>
+
+                    <p class="card-note negative">
+                        <i class="fa-solid fa-circle-arrow-down"></i>
+                        Money spent
+                    </p>
+
+                </article>
+
+
+                <article class="summary-card">
+
+                    <div class="card-top">
+                        <span>Total Savings</span>
+                        <span class="card-icon savings-icon">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                        </span>
+                    </div>
+
+                    <h2 id="totalSavings">₦200,000.00</h2>
+
+                    <p class="card-note">
+                        Your savings progress
+                    </p>
+
+                </article>
+
+            </section>
+
+
+            <!-- CHARTS AREA -->
+            <section class="dashboard-grid" id="reports">
+
+                <article class="panel income-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Income vs Expenses</h3>
+                            <p>Review your money flow.</p>
+                        </div>
+
+                        <select id="chartPeriod" aria-label="Chart period">
+                            <option value="week">This Week</option>
+                            <option value="month" selected>This Month</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+
+                    <div class="chart-placeholder">
+                        <div class="chart-bars">
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 75%"></div>
+                                <div class="bar expense-bar" style="height: 45%"></div>
+                                <span>Mon</span>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 60%"></div>
+                                <div class="bar expense-bar" style="height: 35%"></div>
+                                <span>Tue</span>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 85%"></div>
+                                <div class="bar expense-bar" style="height: 55%"></div>
+                                <span>Wed</span>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 55%"></div>
+                                <div class="bar expense-bar" style="height: 30%"></div>
+                                <span>Thu</span>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 90%"></div>
+                                <div class="bar expense-bar" style="height: 50%"></div>
+                                <span>Fri</span>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 65%"></div>
+                                <div class="bar expense-bar" style="height: 40%"></div>
+                                <span>Sat</span>
+                            </div>
+
+                            <div class="bar-group">
+                                <div class="bar income-bar" style="height: 45%"></div>
+                                <div class="bar expense-bar" style="height: 25%"></div>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-legend">
+                        <span><i class="legend-dot income-dot"></i> Income</span>
+                        <span><i class="legend-dot expense-dot"></i> Expenses</span>
+                    </div>
+
+                </article>
+
+
+                <article class="panel budget-panel" id="budgets">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Budget Overview</h3>
+                            <p>Your monthly spending limits.</p>
+                        </div>
+
+                        <button class="text-button">View all</button>
+                    </div>
+
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span><i class="fa-solid fa-utensils"></i> Food</span>
+                            <span>₦45,000 / ₦80,000</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill food-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span><i class="fa-solid fa-car"></i> Transport</span>
+                            <span>₦25,000 / ₦50,000</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill transport-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span><i class="fa-solid fa-bag-shopping"></i> Shopping</span>
+                            <span>₦60,000 / ₦70,000</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill shopping-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span><i class="fa-solid fa-bolt"></i> Bills</span>
+                            <span>₦20,000 / ₦60,000</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill bills-progress"></div>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- TRANSACTIONS -->
+            <section class="panel transactions-panel" id="transactions">
+
+                <div class="panel-header">
+                    <div>
+                        <h3>Recent Transactions</h3>
+                        <p>Keep track of your latest activity.</p>
+                    </div>
+
+                    <button class="text-button" id="viewTransactionsBtn">
+                        View all
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="transactionList">
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon food">
+                                            <i class="fa-solid fa-utensils"></i>
+                                        </span>
+                                        <span>Groceries</span>
+                                    </div>
+                                </td>
+                                <td>Oct 09, 2026</td>
+                                <td>Food</td>
+                                <td class="amount expense-amount">-₦25,000</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon salary">
+                                            <i class="fa-solid fa-briefcase"></i>
+                                        </span>
+                                        <span>Salary</span>
+                                    </div>
+                                </td>
+                                <td>Oct 08, 2026</td>
+                                <td>Income</td>
+                                <td class="amount income-amount">+₦250,000</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="transaction-name">
+                                        <span class="transaction-icon transport">
+                                            <i class="fa-solid fa-car"></i>
+                                        </span>
+                                        <span>Transport</span>
+                                    </div>
+                                </td>
+                                <td>Oct 07, 2026</td>
+                                <td>Transport</td>
+                                <td class="amount expense-amount">-₦8,000</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>© 2026 PennyTrack. Manage your money with confidence.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
